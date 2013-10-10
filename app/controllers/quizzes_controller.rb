@@ -18,5 +18,17 @@ def create
 	redirect_to quiz
 end
 
+def edit
+@quiz =Quiz.find(params[:id])
+end
+
+def update
+	@quiz =Quiz.find params[:id]
+	if @quiz.update params[:quiz].permit(:title)
+      redirect_to @quiz
+    else
+      render 'edit'
+  	end
+end
 
 end

@@ -60,6 +60,14 @@ end
 end
 
 
+describe '/quizzes/edit' do
+it 'should edit existing quizz' do
+	visit('/quizzes/1/edit')
+	exiting_title = Quiz.find(1).title
+	fill_in 'Title' , with: 'New Title which should be the same'
+	click_button 'Update'
+	expect(Quiz.find(1).title).not_to eq exiting_title
+end
 
-
+end
 end
