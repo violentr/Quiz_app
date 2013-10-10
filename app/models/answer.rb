@@ -1,2 +1,3 @@
 class Answer < ActiveRecord::Base
-end 
+	belongs_to :question
+end

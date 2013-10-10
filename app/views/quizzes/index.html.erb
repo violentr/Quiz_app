@@ -3,7 +3,8 @@
 <p>Quizz is :</p>
 <% @quizzes.each do |quiz| %>
 <%= link_to quiz.title, quiz %><br>
-
 <% end %>
+
+<%= button_to "Create New Quiz", new_quiz_path, :method=> :get %>
 
 

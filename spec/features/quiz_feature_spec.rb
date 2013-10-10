@@ -44,6 +44,21 @@ describe '/quizzes/new' do
 	end 
 end 
 
+describe '/quizzes/new' do 
+	it 'creates a new quiz with question' do 
+		visit '/quizzes/new'
+
+		fill_in 'Title', with: 'Brand new quiz'
+		fill_in 'Question', with: 'Question'
+		click_button "Create Quiz"
+	
+		
+	expect(page).to have_content 'Brand new quiz'
+	#expect(page).to have_content 'Question'
+end 
+
+end
+
 
 
 

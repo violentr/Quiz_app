@@ -4,6 +4,13 @@
   <%= f.label :title, 'Title' %>
   <%= f.text_field :title, placeholder: 'Your title here' %>
 
-  <%= f.submit %>
+  <%= fields_for :questions do |question_f| %>
+	  <%= question_f.label :query, "Question:" %>
+	  <%= question_f.text_field :query %>
+  <% end %>
+  <%= f.submit value="Create Quiz"%>
 
 <% end %>
+
+
+

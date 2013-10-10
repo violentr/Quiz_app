@@ -29,10 +29,11 @@ gem 'jbuilder', '~> 1.2'
 
 
 
-group :development do
+group :development, :test do
 	gem 'rspec-rails'
 	gem 'capybara'
 	gem 'database_cleaner'
+	gem 'shoulda'
 end
 
 
